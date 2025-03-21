@@ -1,1 +1,311 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mimi Yu Portfolio</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <!-- Font Family -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom Styles (Overrides & Additional Styles) -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="font-sans">
+    <!-- Navbar -->
+    <nav class="fixed top-0 left-0 w-full shadow-md z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <!-- Logo and Section Title -->
+            <div class="flex items-center space-x-4">
+                <a href="#" class="text-2xl font-bold">Mimi Yu</a>
+                <div id="sticky-title" class="text-md font-semibold bg-white text-gray-400 px-4 py-2 shadow-md"></div>
+            </div>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-6">
+                <a href="#about" class="text-gray-700">About</a>
+                <a href="#experience" class="text-gray-700">Experience</a>
+                <a href="#projects" class="text-gray-700">Projects</a>
+                <a href="#skills" class="text-gray-700">Skills</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="md:hidden flex flex-col space-y-1.5 w-8 h-8 focus:outline-none">
+                <span class="block w-8 h-1 bg-gray-700 transition-transform duration-300 ease-in-out"></span>
+                <span class="block w-8 h-1 bg-gray-700 transition-opacity duration-300 ease-in-out"></span>
+                <span class="block w-8 h-1 bg-gray-700 transition-transform duration-300 ease-in-out"></span>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white w-full">
+            <a href="#about" class="block px-4 py-2 text-gray-700 hover:bg-blue-100">About</a>
+            <a href="#experience" class="block px-4 py-2 text-gray-700 hover:bg-blue-100">Experience</a>
+            <a href="#projects" class="block px-4 py-2 text-gray-700 hover:bg-blue-100">Projects</a>
+            <a href="#skills" class="block px-4 py-2 text-gray-700 hover:bg-blue-100">Skills</a>
+        </div>
+    </nav>
+
+    <!-- About Section -->
+    <section id="about" class="text-white h-screen flex flex-col p-4 justify-center items-center">
+        <div class="mt-auto">
+            <h1 class="text-5xl font-bold mb-4">Hello, I'm Mimi</h1>
+            <p class="text-lg mb-6 text-gray-600 text-left">A passionate software developer who loves building amazing web experiences and a lifelong learner.</p>
+        
+            <div class="flex space-x-4">
+                <a href="https://www.linkedin.com/in/mimiyu101" target="_blank" class="text-2xl">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/mimi030" target="_blank" class="text-2xl">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="max-w-6xl sm:max-w-4xl md:max-w-4xl sm:px-0 md:px-12 mx-auto mt-8">
+            <h2 class="text-1xl font-bold text-white">About</h2>
+            <p class="mt-8 text-md text-gray-600">
+                I’m a software developer with expertise in building web applications using modern technologies like HTML, CSS, JavaScript, React, Python, and more. I’m passionate about writing clean and efficient code, as well as continually improving my skill set.
+            </p>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="px-4 py-16 bg-white text-left">
+        <div class="max-w-6xl sm:max-w-4xl md:max-w-4xl sm:px-0 md:px-12 mx-auto">
+            <h2 class="text-1xl font-bold text-white">Experience</h2>
+            <div class="mt-8 text-md text-gray-600">
+                <p class="text-white"><b>Software Developer</b></p>
+                <p class="text-sm">The Independent Learning Centre, CUHK, Remote (Contract) | APR 2023 - AUG 2023</p>
+                <ul class="my-2 list-disc pl-6 space-y-2 text-left text-sm text-gray-600">
+                    <li>
+                        Redesigned and developed a language learning platform, improving load times and user engagement by <b>40%</b>.
+                    </li>
+                    <li>
+                        Optimized system performance by refining database queries and API calls, reducing response times by <b>53%</b>.
+                    </li>
+                    <li>
+                        Implemented logging and error tracking mechanisms, improving debugging efficiency and system reliability.
+                    </li>
+                    <li>
+                        Worked closely with business stakeholders to gather requirements, deliver technical guidance, and ensure alignment with project goals, achieving <b>over 94%</b> client satisfaction.
+                    </li>
+                </ul>
+
+                <!-- Technologies -->
+                <div class="mt-6">
+                    <div class="flex flex-wrap space-x-2 space-y-2">
+                        <span class="ml-2 mt-2 px-3 py-1 rounded-full skill-badge">JavaScript</span>
+                        <span class="px-3 py-1 rounded-full skill-badge">ASP.NET</span>
+                        <span class="px-3 py-1 rounded-full skill-badge">C#</span>
+                        <span class="px-3 py-1 rounded-full skill-badge">HTML5</span>
+                        <span class="px-3 py-1 rounded-full skill-badge">CSS</span>
+                        <span class="px-3 py-1 rounded-full skill-badge">Bootstrap</span>
+                        <span class="px-3 py-1 rounded-full skill-badge">jQuery</span>
+                        <span class="px-3 py-1 rounded-full skill-badge">JSON</span>
+                        <span class="px-3 py-1 rounded-full skill-badge">Git</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-8 text-md text-gray-600">
+                <p class="text-white"><b>IT Project Coordinator (Software Developer)</b></p>
+                <p class="text-sm">The Independent Learning Centre, CUHK, Shatin, HKSAR (Full Time) | AUG 2016 - NOV 2022</p>
+                <ul class="my-2 list-disc pl-6 space-y-2 text-left text-sm text-gray-600">
+                    <li>
+                        Led frontend development and optimization of interactive online learning platforms, integrating features like
+learning progress tracking and resource filtering, which increased user satisfaction and engagement by <b>26%</b>.
+                    </li>
+                    <li>
+                        Designed, developed, and maintained scalable applications for over <b>1M+</b> users annually, collaborating with
+cross-functional teams to ensure high availability, performance, and timely delivery.
+                    </li>
+                    <li>
+                        Implemented logging, monitoring, and debugging practices, reducing production issues by <b>40%</b> and improving system reliability, while collaborating with the IT team on server reliability.
+                    </li>
+                    <li>
+                        Worked closely with IT teams to improve security and implement data access control and user authentication best practices.
+                    </li>
+                    <li>
+                        Collaborated with backend teams to ensure smooth integration between frontend and backend services.
+                    </li>
+                </ul>
+
+                <!-- Technologies -->
+                <div class="mt-6">
+                    <div class="flex flex-wrap space-x-2 space-y-2">
+                        <span class="ml-2 mt-2 px-3 py-1 rounded-full skill-badge">JavaScript</span>
+                        <span class="px-3 py-1 rounded-full skill-badge">ASP.NET</span>
+                        <span class="px-3 py-1 rounded-full skill-badge">C#</span>
+                        <span class="px-3 py-1 rounded-full skill-badge">HTML5</span>
+                        <span class="px-3 py-1 rounded-full skill-badge">CSS</span>
+                        <span class="px-3 py-1 rounded-full skill-badge">Bootstrap</span>
+                        <span class="px-3 py-1 rounded-full skill-badge">jQuery</span>
+                        <span class="px-3 py-1 rounded-full skill-badge">JSON</span>
+                        <span class="px-3 py-1 rounded-full skill-badge">Git</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20">
+        <div class="max-w-6xl sm:max-w-4xl md:max-w-4xl sm:px-0 md:px-12 mx-auto px-6">
+            <h2 class="text-1xl font-bold text-left mb-8">Projects</h2>
+            <div class="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 custom-card">               
+                <!-- Project 1 -->
+                <div class="p-6 rounded-lg shadow-md">
+                    <img src="assets/images/project1.jpg" alt="Task Management System" class="w-full h-48 object-cover rounded-md">
+                    <a href="https://github.com/mimi030/task_management_system_django_next_v1">
+                        <h3 class="text-lg font-semibold mt-4">
+                            Task Management System
+                            <i class="fa fa-external-link pl-1" aria-hidden="true"></i>
+                        </h3>
+                    </a>
+                    <p class="text-gray-600 mt-2">A full-stack application built with React, Next.js and Django REST framework.</p>
+                </div>
+        
+                <!-- Project 2 -->
+                <div class="p-6 rounded-lg shadow-md">
+                    <img src="assets/images/project2.jpg" alt="Secure Django Deployment on AWS Fargate with Terraform" class="w-full h-48 object-cover rounded-md">
+                    <a href="https://github.com/mimi030/django-ecs-sample/">
+                        <h3 class="text-lg font-semibold mt-4">
+                            Secure Django Deployment on AWS Fargate with Terraform
+                            <i class="fa fa-external-link pl-1" aria-hidden="true"></i>
+                        </h3>
+                    </a>
+                    <p class="text-gray-600 mt-2">A Django application deployed on AWS Fargate with Terraform.</p>
+                </div>
+        
+                <!-- Project 3 -->
+                <div class="p-6 rounded-lg shadow-md">
+                    <img src="assets/images/project3.jpg" alt="Full-stack E-commerce Platform Development" class="w-full h-48 object-cover rounded-md">
+                    <a href="https://github.com/mimi030/ecommerce_django_vue">
+                        <h3 class="text-lg font-semibold mt-4">
+                            Full-stack E-commerce Platform Development
+                            <i class="fa fa-external-link pl-1" aria-hidden="true"></i>
+                        </h3>
+                    </a>
+                    <p class="text-gray-600 mt-2">A full-stack application built with Vue and Django REST framework.</p>
+                </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="px-4 py-16 bg-white text-left">
+        <div class="max-w-6xl sm:max-w-4xl md:max-w-4xl sm:px-0 md:px-12 mx-auto">
+            <h2 class="text-1xl font-bold text-left text-white mb-8">Skills</h2><!-- Skills Grid -->
+            <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+                
+                <!-- Languages -->
+                <div>
+                    <h3 class="text-md font-semibold text-accent mb-2">Languages</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-badge">Python</span>
+                        <span class="skill-badge">JavaScript</span>
+                        <span class="skill-badge">TypeScript</span>
+                        <span class="skill-badge">HTML5</span>
+                        <span class="skill-badge">CSS3</span>
+                        <span class="skill-badge">SQL</span>
+                    </div>
+                </div>
+            
+                <!-- Frameworks -->
+                <div>
+                    <h3 class="text-md font-semibold text-accent mb-2">Frameworks</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-badge">React.js</span>
+                        <span class="skill-badge">Node.js</span>
+                        <span class="skill-badge">Next.js</span>
+                        <span class="skill-badge">Django</span>
+                        <span class="skill-badge">Django REST Framework</span>
+                        <span class="skill-badge">Vue.js</span>
+                        <span class="skill-badge">.NET Framework</span>
+                        <span class="skill-badge">Bootstrap</span>
+                    </div>
+                </div>
+            
+                <!-- Cloud Computing -->
+                <div>
+                    <h3 class="text-md font-semibold text-accent mb-2">Cloud Computing</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-badge">AWS</span>
+                        <span class="skill-badge">GCP</span>
+                        <span class="skill-badge">EC2</span>
+                        <span class="skill-badge">S3</span>
+                        <span class="skill-badge">RDS</span>
+                        <span class="skill-badge">Lambda</span>
+                        <span class="skill-badge">BigQuery</span>
+                    </div>
+                </div>
+            
+                <!-- Tools & CI/CD -->
+                <div>
+                    <h3 class="text-md font-semibold text-accent mb-2">Tools & CI/CD</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-badge">Terraform</span>
+                        <span class="skill-badge">Docker</span>
+                        <span class="skill-badge">Git</span>
+                        <span class="skill-badge">GitHub Actions</span>
+                        <span class="skill-badge">Playwright</span>
+                        <span class="skill-badge">Postman</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-white text-sm text-center py-4">
+        <p>&copy; <script>document.write(new Date().getFullYear())</script> Mimi Yu. All rights reserved.</p>
+    </footer>
+
+    <!-- Custom JavaScript -->
+    <script>
+        /* Mobile Menu & Toggle Button Animation */
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const bars = menuBtn.querySelectorAll('span');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+
+            // Animate bars to form a cross
+            bars[0].classList.toggle('rotate-45');
+            bars[0].classList.toggle('translate-y-2');
+            bars[2].classList.toggle('-rotate-45');
+            bars[2].classList.toggle('-translate-y-2');
+            bars[1].classList.toggle('opacity-0'); // Hide middle bar
+        });
+
+        /* Sticky Section Title */
+        document.addEventListener("scroll", () => {
+            let sections = document.querySelectorAll("section");
+            let navbarHeight = document.querySelector("nav").offsetHeight;
+            let titleBox = document.getElementById("sticky-title");
+            let visible = false;
+
+            sections.forEach(section => {
+                let rect = section.getBoundingClientRect();
+                if (rect.top < navbarHeight && rect.bottom > navbarHeight) {
+                    titleBox.innerText = section.querySelector("h2")?.innerText || "";
+                    visible = true;
+                }
+            });
+
+            if (visible) {
+                titleBox.style.opacity = "1";
+                titleBox.style.transform = "translateY(0)"; // Adjust the translateY value to your desired position
+            } else {
+                titleBox.style.opacity = "0";
+                titleBox.style.transform = "translateY(-20px)"; // This hides the title when it's not in view
+            }
+        });
+    </script>
+</body>
+</html>
