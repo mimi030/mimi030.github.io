@@ -99,6 +99,11 @@ html {
     scroll-behavior: smooth;
 }
 
+/* Custom about styles */
+.custom-about p {
+    padding: 1vh 0px;
+}
+
 /* Custom card styles */
 .custom-card {
     background-color: rgba(16, 37, 31, 0.5);
