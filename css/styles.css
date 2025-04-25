@@ -6,6 +6,8 @@
     --accent-color: #20c997; /* Teal-green accent */
     --frame-hover: rgba(32, 201, 151, 0.3); /* Lighter teal frame on hover */
     --hover-color: #14b8a6; /* Lighter teal for hover */
+    --card-bg: rgba(16, 37, 31, 0.5); /* Semi-transparent card background */
+    --card-hover-bg: rgba(16, 37, 31, 0.9); /* Lighter semi-transparent card background */
 }
 
 /* Apply the background gradient */
@@ -88,6 +90,9 @@ a.btn:hover {
 .bg-white {
     background-color: var(--card-bg) !important;
 }
+.bg-white:hover {
+    background-color: var(--card-hover-bg) !important;
+}
 .text-gray-700 {
     color: var(--text-color) !important;
 }
@@ -98,11 +103,6 @@ a.btn:hover {
 /* Enable smooth scrolling */
 html {
     scroll-behavior: smooth;
-}
-
-/* Custom card styles */
-.custom-card {
-    background-color: rgba(16, 37, 31, 0.5);
 }
 
 /* Custom skill badge styles */
