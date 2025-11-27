@@ -10,12 +10,21 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
         <!-- Font Awesome CDN -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        <!-- DevIcons CDN -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
         <!-- Tailwind CSS CDN -->
         <script src="https://cdn.tailwindcss.com"></script>
         <!-- Custom Styles (Overrides & Additional Styles) -->
         <link rel="stylesheet" href="css/styles.css">
     </head>
     <body class="font-sans">
+        <!-- Animated Background Lights -->
+        <div class="background-lights">
+            <div class="light-spot light-spot-1"></div>
+            <div class="light-spot light-spot-2"></div>
+            <div class="light-spot light-spot-3"></div>
+        </div>
+        
         <!-- Navbar -->
         <nav class="fixed top-0 left-0 w-full shadow-md z-50">
             <div class="container mx-auto px-4 py-3 flex justify-between items-center">
@@ -75,7 +84,7 @@
                         I’m a software developer specializing in <span class="font-semibold">frontend and full-stack development, as well as cloud computing</span>. I build scalable, user-friendly web applications and integrate cloud solutions to improve performance.
                     </p>
                     <p class="my-3">
-                        Over the past year, I earned the <span class="font-semibold">AWS Certified Solutions Architect certification</span> and gained hands-on experience deploying applications and optimizing cloud infrastructure. I've worked on online learning platforms and various web applications, focusing on clean, efficient code and seamless user experiences.
+                        Over the past year, I earned the <span class="font-semibold">AWS Certified Solutions Architect certification</span> and gained experience indeploying applications and optimizing cloud infrastructure on AWS and GCP. I've worked on online learning platforms and various web applications, focusing on clean, efficient code and seamless user experiences.
                     </p>
                     <p class="my-3">
                         I’m currently exploring AI, Generative AI, and Large Language Models (LLMs) to enhance my skills and integrate AI-driven solutions into development workflows.
@@ -87,72 +96,98 @@
         <!-- Experience Section -->
         <section id="experience" class="px-4 py-16 text-left">
             <div class="max-w-6xl sm:max-w-4xl md:max-w-4xl sm:px-0 md:px-12 mx-auto">
-                <h2 class="text-1xl font-bold text-white">Experience</h2>
-                <div class="mt-6 text-md text-gray-600">
-                    <p class="text-white"><b>Software Developer</b></p>
-                    <p class="text-sm">The Independent Learning Centre, CUHK, Toronto, ON, Canada | Feb 2018 - Aug 2023</p>
-                    <ul class="my-2 list-disc pl-6 space-y-2 text-left text-sm text-gray-600">
-                        <li>
-                            Led frontend development for interactive online learning platforms used by <b>10,000+ users annually</b>, ensuring high performance and responsiveness across devices.
-                        </li>
-                        <li>
-                            Partnered with business stakeholders to gather requirements, provide technical guidance, and create interactive prototypes that improved communication between non-technical stakeholders and developers, accelerating delivery and achieving over <b>94%</b> client satisfaction.
-                        </li>
-                        <li>
-                            Integrated learning progress tracking and checkpoint features that enhanced user learning and comprehension, increasing engagement and satisfaction by <b>37%</b>.
-                        </li>
-                        <li>
-                            Developed a resource filtering tool to reduce search time by <b>23%</b>, while implementing logging, monitoring, and debugging strategies to reduce production issues by <b>39%</b> and improve system reliability.
-                        </li>
-                        <li>
-                            Optimized system performance by refining database queries and API calls, reducing response times by <b>53%</b>.
-                        </li>
-                    </ul>
-
-                    <!-- Technologies -->
-                    <div class="mt-6">
-                        <div class="flex flex-wrap space-x-2 space-y-2">
-                            <span class="ml-2 mt-2 skills-list-item skill-badge">JavaScript</span>
-                            <span class="skills-list-item skill-badge">.NET Framework</span>
-                            <span class="skills-list-item skill-badge">C#</span>
-                            <span class="skills-list-item skill-badge">HTML5</span>
-                            <span class="skills-list-item skill-badge">CSS</span>
-                            <span class="skills-list-item skill-badge">Bootstrap</span>
-                            <span class="skills-list-item skill-badge">jQuery</span>
-                            <span class="skills-list-item skill-badge">JSON</span>
-                            <span class="skills-list-item skill-badge">Git</span>
+                <h2 class="text-1xl font-bold text-white mb-8">Experience</h2>
+                
+                <!-- Timeline Container -->
+                <div class="experience-timeline">
+                    <!-- Points Wrapper - All dots positioned absolutely -->
+                    <div class="points-wrapper">
+                        <!-- Point 1 - Oldest -->
+                        <div class="timeline-point" data-index="0" style="left: 10%;">
+                            <div class="point-dot"></div>
+                        </div>
+                        
+                        <!-- Point 2 - Middle -->
+                        <div class="timeline-point" data-index="1" style="left: 50%;">
+                            <div class="point-dot"></div>
+                        </div>
+                        
+                        <!-- Point 3 - Newest -->
+                        <div class="timeline-point active" data-index="2" style="left: 90%;">
+                            <div class="point-dot"></div>
                         </div>
                     </div>
-                </div>
-
-                <div class="mt-8 text-md text-gray-600">
-                    <p class="text-white"><b>Front End Developer</b></p>
-                    <p class="text-sm">The Independent Learning Centre, CUHK, Shatin, HKSAR | AUG 2016 - JAN 2018</p>
-                    <ul class="my-2 list-disc pl-6 space-y-2 text-left text-sm text-gray-600">
-                        <li>
-                            Developed responsive UI for educational platforms, increasing engagement by <b>31%</b>.
-                        </li>
-                        <li>
-                            Bridged communication between non-technical stakeholders and developers through mockups and documentation.
-                        </li>
-                        <li>
-                            Collaborated with backend developers to integrate seamless APIs and ensure end-to-end functionality.
-                        </li>
-                    </ul>
-
-                    <!-- Technologies -->
-                    <div class="mt-6">
-                        <div class="flex flex-wrap space-x-2 space-y-2">
-                            <span class="ml-2 mt-2 skills-list-item skill-badge">JavaScript</span>
-                            <span class="skills-list-item skill-badge">.NET Framework</span>
-                            <span class="skills-list-item skill-badge">C#</span>
-                            <span class="skills-list-item skill-badge">HTML5</span>
-                            <span class="skills-list-item skill-badge">CSS</span>
-                            <span class="skills-list-item skill-badge">Bootstrap</span>
-                            <span class="skills-list-item skill-badge">jQuery</span>
-                            <span class="skills-list-item skill-badge">JSON</span>
-                            <span class="skills-list-item skill-badge">Git</span>
+                    
+                    <!-- Experience Content Container -->
+                    <div class="experience-items">
+                        <!-- Experience 1 - Oldest -->
+                        <div class="experience-item" data-index="0">
+                            <div class="experience-header">
+                                <p class="experience-title"><b>Front End Developer</b></p>
+                                <p class="experience-location">The Independent Learning Centre, CUHK, Shatin, HKSAR | AUG 2016 - JAN 2018</p>
+                            </div>
+                            <div class="experience-skills">
+                                <span class="skill-badge" title="JavaScript"><i class="devicon-javascript-plain"></i></span>
+                                <span class="skill-badge" title=".NET Framework"><i class="devicon-dotnetcore-plain"></i></span>
+                                <span class="skill-badge" title="C#"><i class="devicon-csharp-plain"></i></span>
+                                <span class="skill-badge" title="HTML5"><i class="devicon-html5-plain"></i></span>
+                                <span class="skill-badge" title="CSS3"><i class="devicon-css3-plain"></i></span>
+                                <span class="skill-badge" title="Bootstrap"><i class="devicon-bootstrap-plain"></i></span>
+                                <span class="skill-badge" title="jQuery"><i class="devicon-jquery-plain"></i></span>
+                                <span class="skill-badge" title="Git"><i class="devicon-git-plain"></i></span>
+                            </div>
                         </div>
+
+                        <!-- Experience 2 - Middle -->
+                        <div class="experience-item" data-index="1">
+                            <div class="experience-header">
+                                <p class="experience-title"><b>Software Developer</b></p>
+                                <p class="experience-location">The Independent Learning Centre, CUHK, Toronto, ON, Canada | Feb 2018 - Aug 2023</p>
+                            </div>
+                            <div class="experience-skills">
+                                <span class="skill-badge" title="JavaScript"><i class="devicon-javascript-plain"></i></span>
+                                <span class="skill-badge" title=".NET Framework"><i class="devicon-dotnetcore-plain"></i></span>
+                                <span class="skill-badge" title="C#"><i class="devicon-csharp-plain"></i></span>
+                                <span class="skill-badge" title="HTML5"><i class="devicon-html5-plain"></i></span>
+                                <span class="skill-badge" title="CSS3"><i class="devicon-css3-plain"></i></span>
+                                <span class="skill-badge" title="Bootstrap"><i class="devicon-bootstrap-plain"></i></span>
+                                <span class="skill-badge" title="jQuery"><i class="devicon-jquery-plain"></i></span>
+                                <span class="skill-badge" title="Git"><i class="devicon-git-plain"></i></span>
+                            </div>
+                        </div>
+
+                        <!-- Experience 3 - Newest -->
+                        <div class="experience-item active" data-index="2">
+                            <div class="experience-header">
+                                <p class="experience-title"><b>Freelance Developer</b></p>
+                                <p class="experience-location">Toronto, ON, Canada | Sep 2023 - Present</p>
+                            </div>
+                            <div class="experience-skills">
+                                <span class="skill-badge" title="Python"><i class="devicon-python-plain"></i></span>
+                                <span class="skill-badge" title="JavaScript"><i class="devicon-javascript-plain"></i></span>
+                                <span class="skill-badge" title="TypeScript"><i class="devicon-typescript-plain"></i></span>
+                                <span class="skill-badge" title="Django"><i class="devicon-django-plain"></i></span>
+                                <span class="skill-badge" title="FastAPI"><i class="devicon-fastapi-plain"></i></span>
+                                <span class="skill-badge" title="React"><i class="devicon-react-original"></i></span>
+                                <span class="skill-badge" title="Next.js"><i class="devicon-nextjs-plain"></i></span>
+                                <span class="skill-badge" title="PostgreSQL"><i class="devicon-postgresql-plain"></i></span>
+                                <span class="skill-badge" title="AWS"><i class="devicon-amazonwebservices-plain"></i></span>
+                                <span class="skill-badge" title="GCP"><i class="devicon-googlecloud-plain"></i></span>
+                                <span class="skill-badge" title="HTML5"><i class="devicon-html5-plain"></i></span>
+                                <span class="skill-badge" title="CSS3"><i class="devicon-css3-plain"></i></span>
+                                <span class="skill-badge" title="Git"><i class="devicon-git-plain"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Navigation Buttons -->
+                    <div class="timeline-navigation">
+                        <button class="nav-btn prev-btn" id="prev-experience" aria-label="Previous experience">
+                            <i class="fa fa-chevron-left"></i>
+                        </button>
+                        <button class="nav-btn next-btn" id="next-experience" aria-label="Next experience">
+                            <i class="fa fa-chevron-right"></i>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -162,55 +197,67 @@
         <section id="projects" class="py-20">
             <div class="max-w-6xl sm:max-w-4xl md:max-w-4xl sm:px-0 md:px-12 mx-auto px-6">
                 <h2 class="text-1xl font-bold text-left mb-8">Projects</h2>
-                <div class="grid gap-8 md:grid-cols-2"> <!-- Responsive grid layout -->
+                <div class="grid gap-8 md:grid-cols-2">
                     
                     <!-- Project 1 -->
-                    <div class="p-6 rounded-lg shadow-md bg-white hover:shadow-lg transition duration-300">
-                        <img src="assets/images/project1.jpg" alt="Task Management System" class="w-full h-48 object-cover rounded-md">
-                        <a href="https://github.com/mimi030/task_management_system_django_next_v1">
-                            <h3 class="text-lg font-semibold mt-4">
-                                Task Management System
-                                <i class="fa fa-external-link pl-1" aria-hidden="true"></i>
-                            </h3>
-                        </a>
-                        <p class="text-gray-600 mt-2">A full-stack application built with React, Next.js and Django REST framework.</p>
-                    </div>
+                    <a href="https://github.com/mimi030/task_management_system_django_next_v1" target="_blank" rel="noopener noreferrer" class="project-card">
+                        <img src="assets/images/project1.jpg" alt="Task Management System">
+                        <h3>
+                            Task Management System
+                            <i class="fa fa-external-link pl-1" aria-hidden="true"></i>
+                        </h3>
+                        <p>A full-stack application built with React, Next.js and Django REST framework.</p>
+                    </a>
             
                     <!-- Project 2 -->
-                    <div class="p-6 rounded-lg shadow-md bg-white hover:shadow-lg transition duration-300">
-                        <img src="assets/images/project2.jpg" alt="Secure Django Deployment on AWS Fargate with Terraform" class="w-full h-48 object-cover rounded-md">
-                        <a href="https://github.com/mimi030/django-ecs-sample/">
-                            <h3 class="text-lg font-semibold mt-4">
-                                Secure Django Deployment on AWS Fargate with Terraform
-                                <i class="fa fa-external-link pl-1" aria-hidden="true"></i>
-                            </h3>
-                        </a>
-                        <p class="text-gray-600 mt-2">A Django application deployed on AWS Fargate with Terraform.</p>
-                    </div>
+                    <a href="https://github.com/mimi030/django-ecs-sample/" target="_blank" rel="noopener noreferrer" class="project-card">
+                        <img src="assets/images/project2.jpg" alt="Secure Django Deployment on AWS Fargate with Terraform">
+                        <h3>
+                            Secure Django Deployment on AWS Fargate with Terraform
+                            <i class="fa fa-external-link pl-1" aria-hidden="true"></i>
+                        </h3>
+                        <p>A Django application deployed on AWS Fargate with Terraform.</p>
+                    </a>
             
                     <!-- Project 3 -->
-                    <div class="p-6 rounded-lg shadow-md bg-white hover:shadow-lg transition duration-300">
-                        <img src="assets/images/project3.jpg" alt="Full-stack E-commerce Platform Development" class="w-full h-48 object-cover rounded-md">
-                        <a href="https://github.com/mimi030/ecommerce_django_vue">
-                            <h3 class="text-lg font-semibold mt-4">
-                                Full-stack E-commerce Platform Development
-                                <i class="fa fa-external-link pl-1" aria-hidden="true"></i>
-                            </h3>
-                        </a>
-                        <p class="text-gray-600 mt-2">A full-stack application built with Vue and Django REST framework.</p>
-                    </div>
+                    <a href="https://github.com/mimi030/ecommerce_django_vue" target="_blank" rel="noopener noreferrer" class="project-card">
+                        <img src="assets/images/project3.jpg" alt="Full-stack E-commerce Platform Development">
+                        <h3>
+                            Full-stack E-commerce Platform Development
+                            <i class="fa fa-external-link pl-1" aria-hidden="true"></i>
+                        </h3>
+                        <p>A full-stack application built with Vue and Django REST framework.</p>
+                    </a>
 
                     <!-- Project 4 -->
-                    <div class="p-6 rounded-lg shadow-md bg-white hover:shadow-lg transition duration-300">
-                        <img src="assets/images/project4.jpg" alt="AI-Powered Meeting Assistant" class="w-full h-48 object-cover rounded-md">
-                        <div>
-                            <h3 class="text-lg font-semibold mt-4">
-                                AI-Powered Meeting Assistant
-                                <i class="fa fa-external-link pl-1" aria-hidden="true"></i>
-                            </h3>
-                        </div>
-                        <p class="text-gray-600 mt-2">AI-powered meeting assistant built with Next.js, OpenAI, and AWS (DynamoDB & S3). Streamlines agendas, notes, and transcripts. Repo available upon request.</p>
-                    </div>
+                     <a href="https://github.com/mimi030/ai-meeting-assistant" target="_blank" rel="noopener noreferrer" class="project-card">
+                        <img src="assets/images/project4.jpg" alt="AI-Powered Meeting Assistant">
+                        <h3>
+                            AI-Powered Meeting Assistant
+                            <i class="fa fa-external-link pl-1" aria-hidden="true"></i>
+                        </h3>
+                        <p>AI-powered meeting assistant built with Next.js, OpenAI, and AWS (DynamoDB & S3). Streamlines agendas, notes, and transcripts.</p>
+                    </a>
+
+                    <!-- Project 5 -->
+                    <a href="https://github.com/mimi030/nature-walk-app" target="_blank" rel="noopener noreferrer" class="project-card">
+                        <img src="assets/images/project5.jpg" alt="Nature Walk App">
+                        <h3>
+                            Nature Walk App
+                            <i class="fa fa-external-link pl-1" aria-hidden="true"></i>
+                        </h3>
+                        <p>Intelligent trail discovery and navigation using Gemini API for environmental insights and Google Maps for seamless guidance.</p>
+                    </a>
+
+                    <!-- Project 6 -->
+                    <a href="#" class="project-card" onclick="event.preventDefault(); alert('Repository available upon request'); return false;">
+                        <img src="assets/images/project6.jpg" alt="Prism Nexus">
+                        <h3>
+                            Prism Nexus
+                            <i class="fa fa-external-link pl-1" aria-hidden="true"></i>
+                        </h3>
+                        <p>Text-to-3D made simple: A powerful application for generating diverse 3D models from prompts, built with Hugging Face, Gemini, and GCP Cloud Run GPU.</p>
+                    </a>
                 </div>
             </div>
         </section>
@@ -218,19 +265,31 @@
         <!-- Skills Section -->
         <section id="skills" class="px-4 py-20 text-left">
             <div class="max-w-6xl sm:max-w-4xl md:max-w-4xl sm:px-0 md:px-12 mx-auto">
-                <h2 class="text-1xl font-bold text-left text-white mb-8">Skills</h2><!-- Skills Grid -->
+                <h2 class="text-1xl font-bold text-left text-white mb-8">Skills</h2>
                 <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
                     
                     <!-- Languages -->
                     <div>
                         <h3 class="text-md font-semibold text-accent mb-2">Languages</h3>
                         <div class="flex flex-wrap gap-2">
-                            <span class="skill-badge">Python</span>
-                            <span class="skill-badge">JavaScript</span>
-                            <span class="skill-badge">TypeScript</span>
-                            <span class="skill-badge">HTML5</span>
-                            <span class="skill-badge">CSS3</span>
-                            <span class="skill-badge">SQL</span>
+                            <span class="skill-badge" title="Python">
+                                <i class="devicon-python-plain"></i>
+                            </span>
+                            <span class="skill-badge" title="JavaScript">
+                                <i class="devicon-javascript-plain"></i>
+                            </span>
+                            <span class="skill-badge" title="TypeScript">
+                                <i class="devicon-typescript-plain"></i>
+                            </span>
+                            <span class="skill-badge" title="HTML5">
+                                <i class="devicon-html5-plain"></i>
+                            </span>
+                            <span class="skill-badge" title="CSS3">
+                                <i class="devicon-css3-plain"></i>
+                            </span>
+                            <span class="skill-badge" title="SQL">
+                                <i class="devicon-mysql-plain"></i>
+                            </span>
                         </div>
                     </div>
                 
@@ -238,14 +297,30 @@
                     <div>
                         <h3 class="text-md font-semibold text-accent mb-2">Frameworks</h3>
                         <div class="flex flex-wrap gap-2">
-                            <span class="skill-badge">React.js</span>
-                            <span class="skill-badge">Node.js</span>
-                            <span class="skill-badge">Next.js</span>
-                            <span class="skill-badge">Django</span>
-                            <span class="skill-badge">Django REST Framework</span>
-                            <span class="skill-badge">Vue.js</span>
-                            <span class="skill-badge">.NET Framework</span>
-                            <span class="skill-badge">Bootstrap</span>
+                            <span class="skill-badge" title="React.js">
+                                <i class="devicon-react-original"></i>
+                            </span>
+                            <span class="skill-badge" title="Node.js">
+                                <i class="devicon-nodejs-plain"></i>
+                            </span>
+                            <span class="skill-badge" title="Next.js">
+                                <i class="devicon-nextjs-plain"></i>
+                            </span>
+                            <span class="skill-badge" title="Django">
+                                <i class="devicon-django-plain"></i>
+                            </span>
+                            <span class="skill-badge" title="FastAPI">
+                                <i class="devicon-fastapi-plain"></i>
+                            </span>
+                            <span class="skill-badge" title="Vue.js">
+                                <i class="devicon-vuejs-plain"></i>
+                            </span>
+                            <span class="skill-badge" title=".NET">
+                                <i class="devicon-dotnetcore-plain"></i>
+                            </span>
+                            <span class="skill-badge" title="Bootstrap">
+                                <i class="devicon-bootstrap-plain"></i>
+                            </span>
                         </div>
                     </div>
                 
@@ -253,13 +328,15 @@
                     <div>
                         <h3 class="text-md font-semibold text-accent mb-2">Cloud Computing</h3>
                         <div class="flex flex-wrap gap-2">
-                            <span class="skill-badge">AWS</span>
-                            <span class="skill-badge">GCP</span>
-                            <span class="skill-badge">EC2</span>
-                            <span class="skill-badge">S3</span>
-                            <span class="skill-badge">RDS</span>
-                            <span class="skill-badge">Lambda</span>
-                            <span class="skill-badge">BigQuery</span>
+                            <span class="skill-badge" title="AWS">
+                                <i class="devicon-amazonwebservices-plain"></i>
+                            </span>
+                            <span class="skill-badge" title="GCP">
+                                <i class="devicon-googlecloud-plain"></i>
+                            </span>
+                            <span class="skill-badge" title="Docker">
+                                <i class="devicon-docker-plain"></i>
+                            </span>
                         </div>
                     </div>
                 
@@ -267,12 +344,18 @@
                     <div>
                         <h3 class="text-md font-semibold text-accent mb-2">Tools & CI/CD</h3>
                         <div class="flex flex-wrap gap-2">
-                            <span class="skill-badge">Terraform</span>
-                            <span class="skill-badge">Docker</span>
-                            <span class="skill-badge">Git</span>
-                            <span class="skill-badge">GitHub Actions</span>
-                            <span class="skill-badge">Playwright</span>
-                            <span class="skill-badge">Postman</span>
+                            <span class="skill-badge" title="Terraform">
+                                <i class="devicon-terraform-plain"></i>
+                            </span>
+                            <span class="skill-badge" title="Docker">
+                                <i class="devicon-docker-plain"></i>
+                            </span>
+                            <span class="skill-badge" title="Git">
+                                <i class="devicon-git-plain"></i>
+                            </span>
+                            <span class="skill-badge" title="GitHub Actions">
+                                <i class="devicon-github-original"></i>
+                            </span>
                         </div>
                     </div>
                 </div>
@@ -325,6 +408,81 @@
                     titleBox.style.transform = "translateY(-20px)"; // This hides the title when it's not in view
                 }
             });
+
+            /* Experience Timeline Carousel */
+            const experienceItems = document.querySelectorAll('.experience-item');
+            const timelinePoints = document.querySelectorAll('.timeline-point');
+            const prevBtn = document.getElementById('prev-experience');
+            const nextBtn = document.getElementById('next-experience');
+            const experienceItemsContainer = document.querySelector('.experience-items');
+            const pointsWrapper = document.querySelector('.points-wrapper');
+            let currentIndex = experienceItems.length - 1;
+            const totalItems = experienceItems.length;
+
+            function updateExperienceDisplay() {
+                experienceItems.forEach((item) => {
+                    const itemIndex = parseInt(item.dataset.index);
+                    item.classList.remove('active');
+                    if (itemIndex === currentIndex) {
+                        item.classList.add('active');
+                    }
+                });
+
+                timelinePoints.forEach((point) => {
+                    const pointIndex = parseInt(point.dataset.index);
+                    point.classList.remove('active');
+                    if (pointIndex === currentIndex) {
+                        point.classList.add('active');
+                    }
+                });
+
+                const isMobile = window.innerWidth <= 768;
+                let translateXContent, translateXPoints;
+                
+                // Point positions: index 0 = 10%, index 1 = 50%, index 2 = 90%
+                // To center active point at 50%: translateX = 50% - pointPosition
+                const pointPositions = isMobile ? [5, 50, 95] : [10, 50, 90];
+                const activePointPosition = pointPositions[currentIndex];
+                translateXPoints = `calc(50% - ${activePointPosition}%)`;
+                
+                if (isMobile) {
+                    // Content: each item is 100% width
+                    translateXContent = `calc(-${currentIndex * 100}% + 50% - 50%)`;
+                } else {
+                    // Content: each item is 50% width
+                    translateXContent = `calc(-${currentIndex * 50}% + 25%)`;
+                }
+                
+                experienceItemsContainer.style.transform = `translateX(${translateXContent})`;
+                if (pointsWrapper) {
+                    pointsWrapper.style.transform = `translateX(${translateXPoints})`;
+                }
+
+                prevBtn.disabled = currentIndex <= 0;
+                nextBtn.disabled = currentIndex >= totalItems - 1;
+            }
+
+            let resizeTimeout;
+            window.addEventListener('resize', () => {
+                clearTimeout(resizeTimeout);
+                resizeTimeout = setTimeout(updateExperienceDisplay, 100);
+            });
+
+            prevBtn.addEventListener('click', () => {
+                if (currentIndex > 0) {
+                    currentIndex--;
+                    updateExperienceDisplay();
+                }
+            });
+
+            nextBtn.addEventListener('click', () => {
+                if (currentIndex < totalItems - 1) {
+                    currentIndex++;
+                    updateExperienceDisplay();
+                }
+            });
+
+            updateExperienceDisplay();
         </script>
     </body>
 </html>

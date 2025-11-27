@@ -8,16 +8,18 @@
     --hover-color: #14b8a6; /* Lighter teal for hover */
     --card-bg: rgba(16, 37, 31, 0.5); /* Semi-transparent card background */
     --card-hover-bg: rgba(16, 37, 31, 0.9); /* Lighter semi-transparent card background */
+    --project-card-bg: #1a2f28; /* Slightly lighter than body background for project cards */
 }
 
 /* Apply the background gradient */
 body {
     background: var(--bg-gradient);
     color: var(--text-color);
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    font-family: 'Roboto', sans-serif;
+    position: relative;
+    overflow-x: hidden;
 }
 
 h1 {
@@ -28,6 +30,92 @@ h1 {
 p {
     font-size: 1rem;
     font-weight: 300;
+}
+
+/* Background light container */
+.background-lights {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+}
+
+/* Individual light spot */
+.light-spot {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    background: radial-gradient(
+        circle at center,
+        rgba(32, 201, 151, 0.18) 0%,
+        rgba(32, 201, 151, 0.12) 20%,
+        rgba(32, 201, 151, 0.06) 40%,
+        rgba(32, 201, 151, 0.03) 60%,
+        rgba(32, 201, 151, 0.01) 80%,
+        transparent 100%
+    );
+    filter: blur(120px);
+    opacity: 0.75;
+    will-change: transform, opacity;
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+}
+
+/* Different starting positions and animations */
+.light-spot-1 {
+    top: 10%;
+    left: 20%;
+    animation: moveLight1 25s ease-in-out infinite;
+}
+
+.light-spot-2 {
+    top: 60%;
+    left: 70%;
+    animation: moveLight2 30s ease-in-out infinite;
+    animation-delay: -5s;
+}
+
+.light-spot-3 {
+    top: 30%;
+    left: 50%;
+    animation: moveLight3 35s ease-in-out infinite;
+    animation-delay: -10s;
+}
+
+/* Smooth, organic movement patterns */
+@keyframes moveLight1 {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    25% { transform: translate(40%, 30%) scale(1.2); }
+    50% { transform: translate(-20%, 50%) scale(0.9); }
+    75% { transform: translate(30%, -20%) scale(1.1); }
+}
+
+@keyframes moveLight2 {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    33% { transform: translate(-50%, -30%) scale(1.3); }
+    66% { transform: translate(30%, 40%) scale(0.8); }
+}
+
+@keyframes moveLight3 {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    20% { transform: translate(60%, 20%) scale(1.1); }
+    40% { transform: translate(-30%, 60%) scale(0.9); }
+    60% { transform: translate(40%, -40%) scale(1.2); }
+    80% { transform: translate(-20%, -20%) scale(1); }
+}
+
+/* Ensure content is above the lights */
+section, nav, footer {
+    position: relative;
+    z-index: 1;
 }
 
 /* Navbar */
@@ -88,7 +176,10 @@ a.btn:hover {
 
 /* Sections */
 .section {
-    @apply px-4 py-20;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
 }
 
 /* Cards */
@@ -112,22 +203,314 @@ html {
 
 /* Custom skill badge styles */
 .skill-badge {
-    background-color: #03DAC6;
-    color: #121212;
-    padding: 6px 12px;
+    color: #03DAC6;
+    padding: 8px;
     border-radius: 9999px;
     font-size: 0.875rem;
     font-weight: 500;
     transition: all 0.3s ease-in-out;
     cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.skill-badge i {
+    font-size: 1.5rem;
+    color: #03DAC6;
 }
 
 .skill-badge:hover {
-    background-color: #03DAC6;
-    color: #121212;
-    box-shadow: 0 4px 10px rgba(3, 218, 198, 0.4);
     transform: scale(1.1);
 }
+
 .skills-list-item {
-    @apply px-3 py-1 rounded-full bg-gray-200 text-gray-800 text-sm font-medium;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    border-radius: 9999px;
+    background-color: #e5e7eb;
+    color: #1f2937;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+/* Project Card Styles */
+.project-card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    padding: 1.5rem;
+    background-color: var(--project-card-bg);
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease-in-out;
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+    background-color: #1f3a32;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.project-card img {
+    width: 100%;
+    height: 12rem;
+    object-fit: cover;
+    object-position: center 15%;
+    border-radius: 0.375rem;
+}
+
+.project-card h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-top: 1rem;
+    color: var(--text-color);
+}
+
+.project-card:hover h3 {
+    color: var(--hover-color);
+}
+
+.project-card p {
+    color: #b3b3b3;
+    margin-top: 0.5rem;
+}
+
+/* Experience Timeline Styles - Horizontal */
+.experience-timeline {
+    position: relative;
+    padding: 4rem 1rem;
+    margin-top: 2rem;
+    min-height: 400px;
+    overflow: hidden;
+}
+
+/* Points Wrapper - All dots positioned on the same line */
+.points-wrapper {
+    position: absolute;
+    width: 100%;
+    top: calc(6rem + 5rem); /* Below header (6rem margin-bottom) + some spacing */
+    left: 0;
+    height: 2px;
+    z-index: 3;
+    transition: transform 0.5s ease-in-out;
+}
+
+.timeline-point {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+}
+
+.point-dot {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: var(--accent-color);
+    border: 3px solid var(--bg-gradient);
+    box-shadow: 0 0 0 2px var(--accent-color);
+    transition: all 0.3s ease-in-out;
+    position: relative;
+}
+
+/* Connecting lines between dots - properly calculated to reach next point */
+.timeline-point:not(:last-child) .point-dot::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    width: calc(40vw - 0.5rem); /* Use viewport width to calculate distance between points */
+    height: 2px;
+    background: var(--accent-color);
+    transform: translateY(-50%);
+    z-index: -1;
+}
+
+/* First segment: from 10% to 50% = 40% of viewport */
+.timeline-point[data-index="0"] .point-dot::after {
+    width: calc(40vw - 0.5rem);
+}
+
+/* Second segment: from 50% to 90% = 40% of viewport */
+.timeline-point[data-index="1"] .point-dot::after {
+    width: calc(21vw - 0.5rem);
+}
+
+.timeline-point.active .point-dot {
+    background-color: white;
+    border-color: white;
+    box-shadow: 0 0 0 2px white, 0 0 15px rgba(255, 255, 255, 0.6);
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+.timeline-point.active .point-dot::after {
+    background: linear-gradient(to right, white, var(--accent-color));
+}
+
+/* Experience Content */
+.experience-items {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: 0;
+    z-index: 2;
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.experience-item {
+    position: relative;
+    flex: 0 0 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+.experience-item.hidden {
+    display: none;
+}
+
+.experience-header {
+    text-align: center;
+    margin-bottom: 4rem;
+    width: 100%;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.experience-item:not(.active) .experience-header {
+    opacity: 0;
+    height: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.experience-item.active .experience-header {
+    opacity: 1;
+}
+
+.experience-title {
+    color: white;
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.experience-location {
+    color: #cfdedb;
+    font-size: 0.875rem;
+    margin-bottom: 0;
+    line-height: 1.3;
+}
+
+.experience-skills {
+    display: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 2rem;
+    width: 100%;
+}
+
+.experience-item.active .experience-skills {
+    display: flex;
+}
+
+.experience-skills .skill-badge {
+    margin: 0;
+}
+
+.timeline-navigation {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.nav-btn {
+    background-color: var(--project-card-bg);
+    color: var(--accent-color);
+    border: 1px solid var(--accent-color);
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    font-size: 1rem;
+}
+
+.nav-btn:hover:not(:disabled) {
+    background-color: var(--accent-color);
+    color: white;
+    transform: scale(1.1);
+}
+
+.nav-btn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+/* Tablet Responsive */
+@media (max-width: 1024px) {
+    .timeline-point:not(:last-child) .point-dot::after {
+        width: calc(40vw - 0.5rem);
+    }
+
+    .timeline-point[data-index="0"] .point-dot::after {
+        width: calc(40vw - 0.5rem);
+    }
+
+    .timeline-point[data-index="1"] .point-dot::after {
+        width: calc(32.5vw - 0.5rem);
+    }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .experience-timeline {
+        padding: 3rem 0.5rem;
+    }
+    
+    .points-wrapper {
+        top: calc(6rem + 2rem);
+    }
+    
+    .timeline-point:not(:last-child) .point-dot::after {
+        width: calc(40vw - 0.5rem);
+    }
+
+    .timeline-point[data-index="0"] .point-dot::after {
+        width: calc(40vw - 0.5rem);
+    }
+
+    .timeline-point[data-index="1"] .point-dot::after {
+        width: calc(35vw - 0.5rem);
+    }
+    
+    .experience-item {
+        flex: 0 0 100%;
+        padding: 0 0.5rem;
+    }
+    
+    .experience-header {
+        margin-bottom: 3rem;
+    }
+    
+    .experience-title {
+        font-size: 1rem;
+    }
+    
+    .experience-location {
+        font-size: 0.75rem;
+    }
 }
