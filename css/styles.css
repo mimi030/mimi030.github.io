@@ -116,7 +116,6 @@ p {
 
 /* Ensure content is above the lights */
 section, nav, footer {
-    position: relative;
     z-index: 1;
 }
 
@@ -133,16 +132,20 @@ nav div#mobile-menu a:hover {
     background-color: var(--hover-color);
 }
 
-button#menu-btn:hover {
+div#menu-btn {
+    padding: 4px 6px;
+}
+
+div#menu-btn:hover {
     background-color: transparent !important;
 }
 
-#menu-btn span {
+div#menu-btn span {
     width: 24px;
     height: 2px;
 }
 
-button#menu-btn:hover span {
+div#menu-btn:hover span {
     color: var(--hover-color);
 }
 
