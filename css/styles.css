@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 /* Global styles */
 :root {
     --bg-gradient: linear-gradient(135deg, #0a0f0d, #10251f); /* Dark mode gradient */
