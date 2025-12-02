@@ -334,14 +334,27 @@ html {
     z-index: -1;
 }
 
+/* Connecting lines between dots - properly calculated to reach previous point */
+.timeline-point:not(:first-child) .point-dot::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    width: calc(10vw - 0.5rem); /* Use viewport width to calculate distance between points */
+    height: 2px;
+    background: var(--accent-color);
+    transform: translateY(-50%);
+    z-index: -1;
+}
+
 /* First segment: from 10% to 50% = 40% of viewport */
 .timeline-point[data-index="0"] .point-dot::after {
-    width: calc(40vw - 0.5rem);
+    width: calc(30vw - 0.5rem);
 }
 
 /* Second segment: from 50% to 90% = 40% of viewport */
 .timeline-point[data-index="1"] .point-dot::after {
-    width: calc(21vw - 0.5rem);
+    width: calc(22vw - 0.5rem);
 }
 
 .timeline-point.active .point-dot {
@@ -354,6 +367,10 @@ html {
 
 .timeline-point.active .point-dot::after {
     background: linear-gradient(to right, white, var(--accent-color));
+}
+
+.timeline-point.active .point-dot::before {
+    background: linear-gradient(to left, white, var(--accent-color));
 }
 
 /* Experience Content */
@@ -473,7 +490,7 @@ html {
     }
 
     .timeline-point[data-index="1"] .point-dot::after {
-        width: calc(32.5vw - 0.5rem);
+        width: calc(32vw - 0.5rem);
     }
 }
 
